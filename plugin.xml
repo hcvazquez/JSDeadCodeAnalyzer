@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="js.JSDeadCodeAnalyzerContribution"
+            nameFilter="*"
+            objectClass="org.eclipse.core.resources.IProject">
+         <!--<action
+               class="js.ui.actions.AddBrowserCodeCoverageInstrumentationAction"
+               enablesFor="+"
+               id="js.AddBrowserCodeCoverageInstrumentationAction"
+               label="Add Browser Code Coverage Instrumentation Code"
+               icon="icons/green_pin.png"
+               menubarPath="js.menu1/js.groupMarker6">
+         </action>-->
+         <action
+               class="js.ui.actions.AddInstrumentationCodeAction"
+               enablesFor="+"
+               id="ui.AddInstrumentationCodeAction"
+               label="Add Instrumentation Code"
+               icon="icons/instrumentation.png"
+               menubarPath="js.menu1/js.groupMarker1">
+         </action>
+         <action
+               class="js.ui.actions.RemoveFunctionsFileAction"
+               enablesFor="+"
+               id="js.RemoveFunctionsFileAction"
+               label="Remove Functions Using Instrumentation Info"
+               icon="icons/cut.png"
+               menubarPath="js.menu1/js.groupMarker2">
+         </action>
+         <menu
+               id="js.menu1"
+               label="JS Dead Code Analyzer"
+               path="additions">
+            <groupMarker
+                  name="js.groupMarker1">
+            </groupMarker>
+            <groupMarker
+                  name="js.groupMarker2">
+            </groupMarker>
+         </menu>
+      </objectContribution>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="js.JSDeadCodeAnalyzerContribution2"
+            nameFilter="*"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               class="js.ui.actions.FileMetricsAction"
+               enablesFor="+"
+               id="ui.FileMetricsAction"
+               label="Calculate File Metrics"
+               icon="icons/instrumentation.png"
+               menubarPath="js.menu1/js.groupMarker1">
+         </action>
+         <menu
+               id="js.menu1"
+               label="JS Dead Code Analyzer"
+               path="additions">
+            <groupMarker
+                  name="js.groupMarker1">
+            </groupMarker>
+         </menu>
+      </objectContribution>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="js.JSDeadCodeAnalyzerContribution3"
+            nameFilter="*"
+            objectClass="org.eclipse.core.resources.IFolder">
+         <action
+               class="js.ui.actions.FolderMetricsAction"
+               enablesFor="+"
+               id="ui.FolderMetricsAction"
+               label="Calculate Folder Metrics"
+               icon="icons/instrumentation.png"
+               menubarPath="js.menu1/js.groupMarker1">
+         </action>
+         <menu
+               id="js.menu1"
+               label="JS Dead Code Analyzer"
+               path="additions">
+            <groupMarker
+                  name="js.groupMarker1">
+            </groupMarker>
+         </menu>
+      </objectContribution>
+   </extension>
+
+</plugin>

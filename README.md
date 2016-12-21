@@ -1,2 +1,2 @@
 # JSDeadCodeAnalyzer
-JSDeadCodeAnalyzer is a Java-based dead code analyzer for JavaScript applications
+JSDeadCodeAnalyzer is an Eclipse WTP plugin for dead code analysis in JavaScript applications
